@@ -1,0 +1,79 @@
+[
+    {
+        "rownum": 1,        
+        "insurance_company_name": "Mediflora Nexus",        
+        "insurance_company_type": "Non-profit",
+        "founded_year": 2019,
+        "coverage_area": "Nationwide"
+    },
+    {
+        "rownum": 2,        
+        "insurance_company_name": "BioCrest Harmony",        
+        "insurance_company_type": "Non-profit",
+        "founded_year": 1996,
+        "coverage_area": "Local"
+    },
+    {
+        "rownum": 3,
+        "insurance_company_name": "CurativeWhale",
+        "insurance_company_type": "Private",
+        "founded_year": 2007,
+        "coverage_area": "Regional"
+    },
+    {
+        "rownum": 4,
+        "insurance_company_name": "HealthZenotron",
+        "insurance_company_type": "Private",
+        "founded_year": 2020,
+        "coverage_area": "Nationwide"
+    },
+    {
+        "rownum": 5,
+        "insurance_company_name": "Vitalynx Orbit",
+        "insurance_company_type": "Public",
+        "founded_year": 2006,
+        "coverage_area": "Regional"
+    },
+    {
+        "rownum": 6,
+        "insurance_company_name": "MediSpectra Flux",
+        "insurance_company_type": "Private",
+        "founded_year": 2015,
+        "coverage_area": "Local"
+    },
+    {
+        "rownum": 7,
+        "insurance_company_name": "Carebubble Spectrum",
+        "insurance_company_type": "Private",
+        "founded_year": 2006,
+        "coverage_area": "Nationwide"
+    },
+    {
+        "rownum": 8,
+        "insurance_company_name": "QuantumPetal",
+        "insurance_company_type": "Private",
+        "founded_year": 1993,
+        "coverage_area": "Regional"
+    },
+    {
+        "rownum": 9,
+        "insurance_company_name": "Heliospring Vital",
+        "insurance_company_type": "Public",
+        "founded_year": 2006,
+        "coverage_area": "Regional"
+    },
+    {
+        "rownum": 10,
+        "insurance_company_name": "CuraQuark Alliance",
+        "insurance_company_type": "Public",
+        "founded_year": 1991,
+        "coverage_area": "Nationwide"
+    },
+    {
+        "rownum": 11,        
+        "insurance_company_name": "MediNimbus",
+        "insurance_company_type": "Non-profit",
+        "founded_year": 1990,
+        "coverage_area": "Local"
+    }
+]

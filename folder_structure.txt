@@ -1,0 +1,39 @@
+DWH_CW_1516/                           # Project root directory
+├── config/                            # Configuration files
+│   └── logging_config.py             # Logging configuration
+│
+├── data/                             # Data directory for source files
+│   ├── appointments.csv              # Appointment records
+│   ├── patients.csv                  # Patient information
+│   ├── slots.csv                     # Available appointment slots
+│   ├── api_sample.json              # Fallback insurance data
+│   └── healthcare.db                 # Source database
+│
+├── db_init/                          # Database initialization
+│   ├── sql_database_create.py        # Source database creation
+│   └── warehouse_create.py           # Data warehouse creation
+│
+├── etl/                              # ETL process modules
+│   ├── etl_extraction.py            # Data extraction module
+│   ├── etl_transformation.py        # Data transformation module
+│   └── etl_loading.py              # Data loading module
+│
+├── logs/                            # Log files directory
+│   ├── etl_extraction.log
+│   ├── etl_transformation.log
+│   ├── etl_loading.log
+│   ├── pipeline.log
+│   └── dashboard.log
+│
+├── warehouse/                       # Data warehouse directory
+│   └── warehouse.db                # Data warehouse database
+│
+├── Dockerfile                      # Docker configuration
+├── docker-compose.yml              # Docker Compose configuration
+├── dashboard.py                    # Dash dashboard application
+├── dashboard_streamlit.py          # Streamlit dashboard application
+├── main.py                         # Main entry point with scheduler
+├── pipeline.py                     # ETL pipeline orchestration
+├── requirements.txt                # Project dependencies
+├── folder_structure.txt            # Project structure documentation
+└── README.md                       # Project documentation

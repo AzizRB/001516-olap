@@ -1,0 +1,65 @@
+version: '3.8'
+
+services:
+  dashboard:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: 001516_dashboard
+    command: ["dashboard"]
+    ports:
+      - "8050:8050"
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./config:/app/config
+      - ./warehouse:/app/warehouse
+    environment:
+      - PYTHONUNBUFFERED=1
+      - DASH_DEBUG_MODE=true
+      - DB_PATH=/app/warehouse/warehouse.db
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8050"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  scheduler:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: 001516_scheduler
+    command: ["scheduler"]
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./config:/app/config
+      - ./warehouse:/app/warehouse
+    environment:
+      - PYTHONUNBUFFERED=1
+      - DB_PATH=/app/warehouse/warehouse.db
+    restart: unless-stopped
+
+  dashboard_streamlit:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: 001516_dashboard_streamlit
+    command: ["streamlit", "run", "dashboard_streamlit.py", "--server.port=8501", "--server.address=0.0.0.0"]
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./config:/app/config
+      - ./warehouse:/app/warehouse
+    environment:
+      - PYTHONUNBUFFERED=1
+      - DB_PATH=/app/warehouse/warehouse.db
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501"]
+      interval: 30s
+      timeout: 10s
+      retries: 3 
